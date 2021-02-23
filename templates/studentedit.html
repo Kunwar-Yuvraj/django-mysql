@@ -17,8 +17,6 @@
   <link href="{% static 'simpleweb/css/nucleo-icons.css' %}" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="{% static 'simpleweb/css/black-dashboard.css' %}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{% static 'simpleweb/demo/demo.css' %}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -56,12 +54,6 @@
             <a href="#">
               <i class="tim-icons icon-credit-card"></i>
               <p>Edit</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="tim-icons icon-atom"></i>
-              <p>About</p>
             </a>
           </li>
           <li>
@@ -278,22 +270,17 @@
       </ul>
     </div>
   </div>
-  <!--   Core JS Files   -->
+
   <script src="{% static 'simpleweb/js/core/jquery.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/core/popper.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/core/bootstrap.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
   <script src="{% static 'simpleweb/js/plugins/chartjs.min.js' %}"></script>
-  <!--  Notifications Plugin    -->
   <script src="{% static 'simpleweb/js/plugins/bootstrap-notify.js' %}"></script>
-  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{% static 'simpleweb/js/black-dashboard.min.js' %}"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <!-- <script src="{% static 'simpleweb/demo/demo.js' %}"></script> -->
+  <script src="{% static 'simpleweb/js/black-dashboard.min.js' %}"></script>
   <script>
+    
     $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');

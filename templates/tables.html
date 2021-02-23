@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Student Management System | SHOW
+    Student SHOW
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
@@ -31,12 +31,7 @@
   <!-- Nucleo Icons -->
   <link href="{% static 'simpleweb/css/nucleo-icons.css' %}" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="{% static 'simpleweb/css/black-dashboard.css' %}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <!-- <link href="{% static 'simpleweb/demo/demo.css' %}" rel="stylesheet" /> -->
-  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script> 
+  <link href="{% static 'simpleweb/css/black-dashboard.css' %}" rel="stylesheet" /> 
 </head>
 
 <body>
@@ -68,12 +63,6 @@
             <a href="./tables.html">
               <i class="tim-icons icon-puzzle-10"></i>
               <p>Show</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="tim-icons icon-atom"></i>
-              <p>About</p>
             </a>
           </li>
           <li>
@@ -122,7 +111,9 @@
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-navbar ">
-                  <li class="nav-link"><a href="javascript:void(0)" onclick="generate()" class="nav-item dropdown-item"><i class="tim-icons icon-wallet-43"></i>PDF</a></li>
+
+                  <li class="nav-link"><a href="javascript:void(0)" id="pdf" class="nav-item dropdown-item"><i class="tim-icons icon-wallet-43"></i>PDF</a></li>
+
                   <li class="nav-link"><a href="javascript:void(0)" onclick="exportF(this)" class="nav-item dropdown-item"><i class="tim-icons icon-attach-87"></i>Excel</a></li>
                 </ul>
               </li>
@@ -251,16 +242,11 @@
   <script src="{% static 'simpleweb/js/core/popper.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/core/bootstrap.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
-  <script src="{% static 'simpleweb/js/plugins/chartjs.min.js' %}"></script>
-  <!--  Notifications Plugin    -->
-  <script src="{% static 'simpleweb/js/plugins/bootstrap-notify.js' %}"></script>
-  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{% static 'simpleweb/js/black-dashboard.min.js' %}"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <!-- <script src="{% static 'simpleweb/demo/demo.js' %}"></script> -->
+  <script src="{% static 'simpleweb/js/black-dashboard.min.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+  <script src="{% static 'simpleweb/js/tableHTMLExport.js' %}"></script>
 
 
   <script>
@@ -374,7 +360,7 @@
       });
     });
   </script>
-  </script>
+
   <script>
     $(document).ready(function(){
       $('#inlineFormInputGroup').keyup(function(){
@@ -416,85 +402,17 @@
   }
 </script>
 
-
 <script>
-function generate() {  
-    var doc = new jsPDF('p', 'pt', 'letter');  
-    var htmlstring = '';  
-    var tempVarToCheckPageHeight = 0;  
-    var pageHeight = 0;  
-    pageHeight = doc.internal.pageSize.height;  
-    specialElementHandlers = {  
-        // element with id of "bypass" - jQuery style selector  
-        '#bypassme': function(element, renderer) {  
-            // true = "handled elsewhere, bypass text extraction"  
-            return true  
-        }  
-    };  
-    margins = {  
-        top: 0,  
-        bottom: 0,  
-        left: 0,  
-        right: 0,  
-        width: 1000  
-    };  
-    var y = 10;  
-    doc.setLineWidth(2);  
-    doc.autoTable({  
-        html: '#search_table',  
-        startY: 10,  
-        theme: 'striped',  
-        columnStyles: {  
-            0: {  
-                cellWidth: 40, 
-                cellHeight: 10, 
 
-            },  
-            1: {  
-                cellWidth: 40, 
-                cellHeight: 10,  
-            },  
-            2: {  
-                cellWidth: 80,  
-                cellHeight: 10, 
-            },  
-            3: {  
-                cellWidth: 80,   
-                cellHeight: 10,
-            },  
-            4: {  
-                cellWidth: 90,   
-                cellHeight: 10,
-            },  
-            5: {  
-                cellWidth: 80,   
-                cellHeight: 10,
-            },
-            6: {  
-                cellWidth: 90,  
-                cellHeight: 10, 
-            },  
-            7: {  
-                cellWidth: 80,   
-                cellHeight: 10,
-            }  
-        },  
-        styles: {  
-            minCellHeight: 10,
-                cellPadding: 3,
-        }  
-    });
-      doc.autoTable({
-  body: [
-    [{ content: 'Text', colSpan: 2, rowSpan: 2, styles: { halign: 'center' } }],
-  ],
-});
-    doc.save('students.pdf');  
-}  
+ $("#pdf").on("click", function(){
+  $("#search_table").tableHTMLExport({
+    type: 'excel',
+    filename: 'pdf.xls'
+  });
+ }); 
+ 
 </script>  
 
-
- <!-- <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script> -->
 </body>
 
 </html>
