@@ -15,14 +15,14 @@ try:
 	os.system(f'cmd /c "mysql -u {username} -p < database/students.sql"')
 
 	try:
-		os.rename('database/students.sql','database/students.sql.old')
+		os.rename('database/students.sql','database/students-old.sql')
 	except:
 		pass
                 
 	
-	print("3. Go to 'http://127.0.0.1:8000'")
+	print("3. Go to 'http://127.0.0.1:6969'")
 	
-	os.system('cmd /k "python manage.py runserver"')
+	os.system('cmd /k "python manage.py runserver 6969"')
 
 
 

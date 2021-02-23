@@ -1,7 +1,8 @@
+create database School_Management_System_by_KunwarYuvraj;
+
 USE School_Management_System_by_KunwarYuvraj;
 
-
-create table IF NOT EXISTS student
+create table student
         (
             UID int auto_increment, 
             Roll_No int(15), 
