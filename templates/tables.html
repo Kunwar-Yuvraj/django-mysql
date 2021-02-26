@@ -1,119 +1,52 @@
-<!--
-=========================================================
-* * Black Dashboard - v1.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <title>
-    Student SHOW
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <title>Student SHOW</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
-  <link href="{% static 'simpleweb/css/nucleo-icons.css' %}" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link href="{% static 'simpleweb/css/black-dashboard.css' %}" rel="stylesheet" /> 
+  <link href="{% static 'simpleweb/css/nucleo-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'simpleweb/css/black-dashboard.css' %}" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper">
     <div class="sidebar">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
-    -->
       <div class="sidebar-wrapper">
-        <div class="logo">
-          <a href="javascript:void(0)" class="simple-text">
-            Student Managemet System
-          </a>
-        </div>
+        <div class="logo"><a href="javascript:void(0)" class="simple-text">Student Managemet System</a></div>
         <ul class="nav">
-          <li>
-            <a href="{% url 'index' %}">
-              <i class="tim-icons icon-bank"></i>
-              <p>Home</p>
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'studentadd' %}">
-              <i class="tim-icons icon-single-02"></i>
-              <p>Add</p>
-            </a>
-          </li>
-          <li class="active ">
-            <a href="./tables.html">
-              <i class="tim-icons icon-puzzle-10"></i>
-              <p>Show</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Kunwar-Yuvraj/django-mysql" target="_blank">
-              <i class="tim-icons icon-molecule-40"></i>
-              <p>Source Code</p>
-            </a>
-          </li>
+          <li><a href="{% url 'index' %}"><i class="tim-icons icon-bank"></i><p>Home</p></a></li>
+          <li><a href="{% url 'studentadd' %}"><i class="tim-icons icon-single-02"></i><p>Add</p></a></li>
+          <li class="active"><a href="./tables.html"><i class="tim-icons icon-puzzle-10"></i><p>Show</p></a></li>
+          <li><a href="https://github.com/Kunwar-Yuvraj/django-mysql" target="_blank"><i class="tim-icons icon-molecule-40"></i><p>Source Code</p></a></li>
         </ul>
       </div>
     </div>
     <div class="main-panel">
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle d-inline">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
-            </div>
-            <a class="navbar-brand" href="javascript:void(0)">Show</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
+              <button type="button" class="navbar-toggler"><span class="navbar-toggler-bar bar1"></span> <span class="navbar-toggler-bar bar2"></span> <span class="navbar-toggler-bar bar3"></span></button>
+            </div><a class="navbar-brand" href="javascript:void(0)">Show</a></div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar navbar-kebab"></span> <span class="navbar-toggler-bar navbar-kebab"></span> <span class="navbar-toggler-bar navbar-kebab"></span></button>
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
               <li class="search-bar input-group">
-                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
-                  <span class="d-lg-none d-md-block">Search</span>
-                </button>
+                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i> <span class="d-lg-none d-md-block">Search</span></button>
               </li>
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                  <div class="photo">
-                    <img src="{% static 'simpleweb/img/d6.png' %}" alt="Profile Photo">
-                  </div>
-                  <b class="caret d-none d-lg-block d-xl-block"></b>
-                  <p class="d-lg-none">
-                    Log out
-                  </p>
+                  <div class="photo"><img src="{% static 'simpleweb/img/d6.png' %}" alt="Profile Photo"></div><b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">Log out</p>
                 </a>
-                <ul class="dropdown-menu dropdown-navbar ">
-
+                <ul class="dropdown-menu dropdown-navbar">
                   <li class="nav-link"><a href="javascript:void(0)" id="pdf" class="nav-item dropdown-item"><i class="tim-icons icon-wallet-43"></i>PDF</a></li>
-
                   <li class="nav-link"><a href="javascript:void(0)" onclick="exportF(this)" class="nav-item dropdown-item"><i class="tim-icons icon-attach-87"></i>Excel</a></li>
                 </ul>
               </li>
@@ -126,82 +59,53 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <input type="text" name="search" class="form-control apnawalasearch" id="inlineFormInputGroup" placeholder="SEARCH (Case Sensitive)">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="tim-icons icon-simple-remove"></i>
-              </button>
+              <input name="search" class="form-control apnawalasearch" id="inlineFormInputGroup" placeholder="SEARCH (Case Sensitive)">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="tim-icons icon-simple-remove"></i></button>
             </div>
           </div>
         </div>
       </div>
-      <!-- End Navbar -->
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-            <div class="card ">
+            <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Students</h4>
-              </div>
+                <h4 class="card-title">Students</h4></div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table tablesorter" id="search_table">
-                    <thead class=" text-primary">
+                    <thead class="text-primary">
                       <tr>
-                        <th>
-                          UID
-                        </th>
-                        <th>
-                          Roll No.
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Class
-                        </th>
-                        <th>
-                          Address
-                        </th>
-                        <th>
-                          Gender
-                        </th>
-                        <th>
-                          Phone No.
-                        </th>
-                        <th>
-                          Email
-                        </th>
-                        <th class="text-center">
-                          Actions
-                        </th>
+                        <th>UID</th>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Address</th>
+                        <th>Gender</th>
+                        <th>Phone No.</th>
+                        <th>Email</th>
+                        <th class="text-center">Actions</th>
                       </tr>
-                    </thead>
-                      {% for i in students %}
+                    </thead>{% for i in students %}
                     <tbody>
                       <tr>
-                        <td> {{i.0}} </td>
-                        <td> {{i.1}} </td>
-                        <td> {{i.2}} </td>
-                        <td> {{i.3}} </td>
-                        <td> {{i.4}} </td>
-                        <td> {{i.5}} </td>
-                        <td> {{i.6}} </td>
-                        <td> {{i.7}} </td>
+                        <td>{{i.0}}</td>
+                        <td>{{i.1}}</td>
+                        <td>{{i.2}}</td>
+                        <td>{{i.3}}</td>
+                        <td>{{i.4}}</td>
+                        <td>{{i.5}}</td>
+                        <td>{{i.6}}</td>
+                        <td>{{i.7}}</td>
                         <td class="text-center">
-                          <a href='studentedit/{{i.0}}'>
-                          <button class="btn btn-icon btn-info btn-round btn-github">
-                            <i class="fas fa-edit"></i>
-                          </button>
-                        </a> &nbsp;
-                         <a href='delete/{{i.0}}'>
-                          <button class="btn btn-icon btn-danger btn-round btn-github">
-                            <i class="fas fa-trash"></i>
-                          </button>
-                        </a>
+                          <a href="studentedit/{{i.0}}">
+                            <button class="btn btn-icon btn-info btn-round btn-github"><i class="fas fa-edit"></i></button>
+                          </a> &nbsp;
+                          <a href="delete/{{i.0}}">
+                            <button class="btn btn-icon btn-danger btn-round btn-github"><i class="fas fa-trash"></i></button>
+                          </a>
                         </td>
-                      </tr>
-                      {% endfor %}
-                    </tbody>
+                      </tr>{% endfor %}</tbody>
                   </table>
                 </div>
               </div>
@@ -212,207 +116,92 @@
     </div>
   </div>
   <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
+    <div class="dropdown show-dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-cog fa-2x"></i></a>
       <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Background</li>
+        <li class="header-title">Sidebar Background</li>
         <li class="adjustments-line">
           <a href="javascript:void(0)" class="switch-trigger background-color">
-            <div class="badge-colors text-center">
-              <span class="badge filter badge-primary active" data-color="primary"></span>
-              <span class="badge filter badge-info" data-color="blue"></span>
-              <span class="badge filter badge-success" data-color="green"></span>
-            </div>
+            <div class="badge-colors text-center"><span class="badge filter badge-primary active" data-color="primary"></span> <span class="badge filter badge-info" data-color="blue"></span> <span class="badge filter badge-success" data-color="green"></span></div>
             <div class="clearfix"></div>
           </a>
         </li>
-        <li class="adjustments-line text-center color-change">
-          <span class="color-label">LIGHT MODE</span>
-          <span class="badge light-badge mr-2"></span>
-          <span class="badge dark-badge ml-2"></span>
-          <span class="color-label">DARK MODE</span>
-        </li>
+        <li class="adjustments-line text-center color-change"><span class="color-label">LIGHT MODE</span> <span class="badge light-badge mr-2"></span> <span class="badge dark-badge ml-2"></span> <span class="color-label">DARK MODE</span></li>
       </ul>
     </div>
   </div>
-  <!--   Core JS Files   -->
   <script src="{% static 'simpleweb/js/core/jquery.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/core/popper.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/core/bootstrap.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
   <script src="{% static 'simpleweb/js/black-dashboard.min.js' %}"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
   <script src="{% static 'simpleweb/js/tableHTMLExport.js' %}"></script>
-
-
   <script>
-    $(document).ready(function() {
-      $().ready(function() {
-        $sidebar = $('.sidebar');
-        $navbar = $('.navbar');
-        $main_panel = $('.main-panel');
-
-        $full_page = $('.full-page');
-
-        $sidebar_responsive = $('body > .navbar-collapse');
-        sidebar_mini_active = true;
-        white_color = false;
-
-        window_width = $(window).width();
-
-        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-
-
-        $('.fixed-plugin a').click(function(event) {
-          if ($(this).hasClass('switch-trigger')) {
-            if (event.stopPropagation) {
-              event.stopPropagation();
-            } else if (window.event) {
-              window.event.cancelBubble = true;
-            }
-          }
-        });
-
-        $('.fixed-plugin .background-color span').click(function() {
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-
-          var new_color = $(this).data('color');
-
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data', new_color);
-          }
-
-          if ($main_panel.length != 0) {
-            $main_panel.attr('data', new_color);
-          }
-
-          if ($full_page.length != 0) {
-            $full_page.attr('filter-color', new_color);
-          }
-
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.attr('data', new_color);
-          }
-        });
-
-        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
-          var $btn = $(this);
-
-          if (sidebar_mini_active == true) {
-            $('body').removeClass('sidebar-mini');
-            sidebar_mini_active = false;
-            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
-          } else {
-            $('body').addClass('sidebar-mini');
-            sidebar_mini_active = true;
-            blackDashboard.showSidebarMessage('Sidebar mini activated...');
-          }
-
-          // we simulate the window Resize so the charts will get updated in realtime.
-          var simulateWindowResize = setInterval(function() {
-            window.dispatchEvent(new Event('resize'));
-          }, 180);
-
-          // we stop the simulation of Window Resize after the animations are completed
-          setTimeout(function() {
-            clearInterval(simulateWindowResize);
-          }, 1000);
-        });
-
-        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
-          var $btn = $(this);
-
-          if (white_color == true) {
-
-            $('body').addClass('change-background');
-            setTimeout(function() {
-              $('body').removeClass('change-background');
-              $('body').removeClass('white-content');
-            }, 900);
-            white_color = false;
-          } else {
-
-            $('body').addClass('change-background');
-            setTimeout(function() {
-              $('body').removeClass('change-background');
-              $('body').addClass('white-content');
-            }, 900);
-
-            white_color = true;
-          }
-
-
-        });
-
-        $('.light-badge').click(function() {
-          $('body').addClass('white-content');
-        });
-
-        $('.dark-badge').click(function() {
-          $('body').removeClass('white-content');
-        });
-      });
-    });
+  $(document).ready(function() {
+    $().ready(function() {
+      $sidebar = $(".sidebar"), $navbar = $(".navbar"), $main_panel = $(".main-panel"), $full_page = $(".full-page"), $sidebar_responsive = $("body > .navbar-collapse"), sidebar_mini_active = !0, white_color = !1, window_width = $(window).width(), fixed_plugin_open = $(".sidebar .sidebar-wrapper .nav li.active a p").html(), $(".fixed-plugin a").click(function(a) {
+        $(this).hasClass("switch-trigger") && (a.stopPropagation ? a.stopPropagation() : window.event && (window.event.cancelBubble = !0))
+      }), $(".fixed-plugin .background-color span").click(function() {
+        $(this).siblings().removeClass("active"), $(this).addClass("active");
+        var a = $(this).data("color");
+        0 != $sidebar.length && $sidebar.attr("data", a), 0 != $main_panel.length && $main_panel.attr("data", a), 0 != $full_page.length && $full_page.attr("filter-color", a), 0 != $sidebar_responsive.length && $sidebar_responsive.attr("data", a)
+      }), $(".switch-sidebar-mini input").on("switchChange.bootstrapSwitch", function() {
+        $(this);
+        1 == sidebar_mini_active ? ($("body").removeClass("sidebar-mini"), sidebar_mini_active = !1, blackDashboard.showSidebarMessage("Sidebar mini deactivated...")) : ($("body").addClass("sidebar-mini"), sidebar_mini_active = !0, blackDashboard.showSidebarMessage("Sidebar mini activated..."));
+        var a = setInterval(function() {
+          window.dispatchEvent(new Event("resize"))
+        }, 180);
+        setTimeout(function() {
+          clearInterval(a)
+        }, 1e3)
+      }), $(".switch-change-color input").on("switchChange.bootstrapSwitch", function() {
+        $(this);
+        1 == white_color ? ($("body").addClass("change-background"), setTimeout(function() {
+          $("body").removeClass("change-background"), $("body").removeClass("white-content")
+        }, 900), white_color = !1) : ($("body").addClass("change-background"), setTimeout(function() {
+          $("body").removeClass("change-background"), $("body").addClass("white-content")
+        }, 900), white_color = !0)
+      }), $(".light-badge").click(function() {
+        $("body").addClass("white-content")
+      }), $(".dark-badge").click(function() {
+        $("body").removeClass("white-content")
+      })
+    })
+  });
   </script>
-
   <script>
-    $(document).ready(function(){
-      $('#inlineFormInputGroup').keyup(function(){
-        search_table($(this).val());
-      });
-
-      function search_table(value){
-        $('#search_table tr').each(function(){
-          var found = 'false';
-          $(this).each(function(){
-            if($(this).text().indexOf(value) >= 0)
-            {
-              found = 'true';
-            }
-          });
-          if(found == 'true')
-          {
-            $(this).show();
-          }
-          else
-          {
-            $(this).hide();
-          }
-        });
-      }
-
-    });
+  $(document).ready(function() {
+    function a(a) {
+      $("#search_table tr").each(function() {
+        var e = "false";
+        $(this).each(function() {
+          $(this).text().indexOf(a) >= 0 && (e = "true")
+        }), "true" == e ? $(this).show() : $(this).hide()
+      })
+    }
+    $("#inlineFormInputGroup").keyup(function() {
+      a($(this).val())
+    })
+  });
   </script>
   <iframe id="txtArea1" style="display:none"></iframe>
-
-<script>
- function exportF(elem) {
-  var table = document.getElementById("search_table");
-  var html = table.outerHTML;
-  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
-  elem.setAttribute("href", url);
-  elem.setAttribute("download", "students.xls"); // Choose the file name
-  return false;
+  <script>
+  function exportF(a) {
+    var e = document.getElementById("search_table"),
+      i = e.outerHTML,
+      t = "data:application/vnd.ms-excel," + escape(i);
+    return a.setAttribute("href", t), a.setAttribute("download", "students.xls"), !1
   }
-</script>
-
-<script>
-
- $("#pdf").on("click", function(){
-  $("#search_table").tableHTMLExport({
-    type: 'excel',
-    filename: 'pdf.xls'
+  </script>
+  <script>
+  $("#pdf").on("click", function() {
+    $("#search_table").tableHTMLExport({
+      type: "excel",
+      filename: "pdf.xls"
+    })
   });
- }); 
- 
-</script>  
-
+  </script>
 </body>
 
 </html>

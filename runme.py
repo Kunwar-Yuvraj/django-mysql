@@ -24,8 +24,5 @@ try:
 	
 	os.system('cmd /k "python manage.py runserver 6969"')
 
-
-
-
 except Exception as e:
 	print(e)

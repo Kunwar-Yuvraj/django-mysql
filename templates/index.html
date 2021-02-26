@@ -3,52 +3,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <title>
-    Student Management System
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <title>Kunwar Yuvraj | Student Management System</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
-  <link href="{% static 'home/css/nucleo-icons.css' %}" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link href="{% static 'home/css/blk-design-system.css' %}" rel="stylesheet" />
+  <link href="{% static 'simpleweb/css/nucleo-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'home/css/blk-design-system.css' %}" rel="stylesheet">
 </head>
 
 <body class="index-page">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </button>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span> <span class="navbar-toggler-bar bar2"></span> <span class="navbar-toggler-bar bar3"></span></button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation">
         <div class="navbar-collapse-header">
           <div class="row">
-            <div class="col-6 collapse-brand">
-              <a>
-                Kunwar Yuvraj
-              </a>
-            </div>
+            <div class="col-6 collapse-brand"><a>Kunwar Yuvraj</a></div>
             <div class="col-6 collapse-close text-right">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="tim-icons icon-simple-remove"></i>
-              </button>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation"><i class="tim-icons icon-simple-remove"></i></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <!-- End Navbar -->
   <div class="wrapper">
     <div class="page-header header-filter">
       <div class="squares square1"></div>
@@ -61,17 +44,9 @@
       <div class="container">
         <div class="content-center brand">
           <h1 class="h1-seo">Student Management System</h1>
-          <h4>Welcome, here you can add, update, show and delete students from <a target="_blank" href="https://www.mysql.com" class="text-warning">MySQL</a> database</h4>
-      
-            <a class=" btn btn-danger" href="{% url 'tables' %}">
-              <i class="tim-icons icon-spaceship"></i> Get Started
-            </a>
-            <br>
-            <br>
-          <a href="https://KunwarYuvraj.herokuapp.com" target="_blank" class="text-success"><h5 class="text-success">Developed by Kunwar Yuvraj</h5></a>
-     
-
-        </div>
+          <h4>Welcome, here you can add, update, show and delete students from <a target="_blank" href="https://www.mysql.com" class="text-info">MySQL</a> database</h4><a class="btn btn-danger" href="{% url 'tables' %}"><i class="tim-icons icon-spaceship"></i> Get Started</a>
+          <br>
+          <br><a href="https://KunwarYuvraj.herokuapp.com" target="_blank" class="text-warning"><h5 class="text-danger">Developed by Kunwar Yuvraj</h5></a></div>
       </div>
     </div>
   </div>
