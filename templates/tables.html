@@ -46,7 +46,7 @@
                   <p class="d-lg-none">Log out</p>
                 </a>
                 <ul class="dropdown-menu dropdown-navbar">
-                  <li class="nav-link"><a href="javascript:void(0)" id="pdf" class="nav-item dropdown-item"><i class="tim-icons icon-wallet-43"></i>PDF</a></li>
+                  <li class="nav-link"><a href="" id="pdf" class="nav-item dropdown-item"><i class="tim-icons icon-wallet-43"></i>PDF</a></li>
                   <li class="nav-link"><a href="javascript:void(0)" onclick="exportF(this)" class="nav-item dropdown-item"><i class="tim-icons icon-attach-87"></i>Excel</a></li>
                 </ul>
               </li>
@@ -197,8 +197,8 @@
   <script>
   $("#pdf").on("click", function() {
     $("#search_table").tableHTMLExport({
-      type: "excel",
-      filename: "pdf.xls"
+      type: "pdf",
+      filename: "students.pdf"
     })
   });
   </script>
